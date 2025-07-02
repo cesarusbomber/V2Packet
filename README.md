@@ -21,3 +21,7 @@ This tool is for educational and testing purposes only. Unauthorized use on netw
 
 ## Wireshark
 Best to use with wireshark.
+
+## Pip Installs
+pip install scapy colorama requests
+Prefarably best to run with 3.11
