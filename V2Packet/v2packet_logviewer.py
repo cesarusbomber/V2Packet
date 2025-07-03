@@ -12,11 +12,11 @@ def tail_f(logfile):
         while True:
             line = f.readline()
             if not line:
-                time.sleep(0.2)
+                time.sleep(0.2) # <-- remove this spam machine, we get it the first time.
                 continue
             print(Fore.GREEN + line.strip())
 
-if __name__ == "__main__":
+if __name__ == "__main__": # <-- who the fuck made this?
     print(Fore.CYAN + "==== LIVE PACKET LOGS ====\n")
     # Wait until the log file exists
     while not os.path.exists(LOG_FILE):
@@ -24,3 +24,5 @@ if __name__ == "__main__":
         time.sleep(1)
 
     tail_f(LOG_FILE)
+
+# Hey buddy! This doesn't work. It will be planned to be rescripted.
