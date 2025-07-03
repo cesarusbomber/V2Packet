@@ -1,0 +1,17 @@
+{
+  "welcome": "Hello! Welcome to V2Packet.",
+  "goodbye": "Goodbye!",
+  "agree_prompt": "⚠️ You must agree to the terms of this tool. Using it without permission is illegal.",
+  "agree_question": "Do you agree? (Y/N): ",
+  "refused": "You refused the agreement.",
+  "no_valid_ip": "No valid IP addresses entered. Try again.",
+  "invalid_option": "Invalid option. Returning to menu.",
+  "payload_large": "⚠️ Payload size is very large. This could be suspicious.",
+  "operation_cancelled": "Operation cancelled.",
+  "sending_packets": "Sending packets...",
+  "logs_empty": "Log file empty.",
+  "logs_title": "===== Logs =====",
+  "logs_end": "=====================",
+  "goodbye_final": "Goodbye! Thank you for using V2Packet.",
+  "mustard_text": "Aww mustard! Come on man, now don’t put no mustard on that you need to put a little season on that thing! WHAT! Man come on get that pepper off there! Come on somebody come get this man! Come on now, come on get that pepper off there, that’s just too much doggone pepper. I dont wanna see this no more."
+}

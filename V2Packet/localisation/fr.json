@@ -1,0 +1,17 @@
+{
+  "welcome": "Bonjour ! Bienvenue dans V2Packet.",
+  "goodbye": "Au revoir !",
+  "agree_prompt": "⚠️ Vous devez accepter les conditions d'utilisation de cet outil. L'utiliser sans permission est illégal.",
+  "agree_question": "Acceptez-vous ? (O/N): ",
+  "refused": "Vous avez refusé l'accord.",
+  "no_valid_ip": "Aucune adresse IP valide entrée. Réessayez.",
+  "invalid_option": "Option invalide. Retour au menu.",
+  "payload_large": "⚠️ La taille de la charge utile est très grande. Cela pourrait être suspect.",
+  "operation_cancelled": "Opération annulée.",
+  "sending_packets": "Envoi de paquets...",
+  "logs_empty": "Le fichier journal est vide.",
+  "logs_title": "===== Journaux =====",
+  "logs_end": "=====================",
+  "goodbye_final": "Au revoir ! Merci d'avoir utilisé V2Packet.",
+  "mustard_text": "Aww moutarde ! Allez mec, ne mets pas de moutarde là-dessus. Tu dois mettre un peu d’assaisonnement sur ce truc ! QUOI ! Mec allez enlève ce poivre de là ! Allez quelqu'un venez chercher cet homme ! Allez maintenant, enlève ce poivre de là, c'est juste trop de foutu poivre. Je ne veux plus voir ça."
+}
