@@ -40,6 +40,7 @@ QUOTES = [
     "Beware the digital paper trail.",
     "Everything is traceable.",
     "The FBI is watching.",
+    "One more Packet! No More, No Less! One More Packet, One More Packet!"
 ]
 
 DANGER_PACKET_SIZE = 10000       # bytes
@@ -208,7 +209,6 @@ def system_info():
     except:
         typing(Fore.MAGENTA + f"Your local IPv4: Unknown")
 
-    # Public IP, ISP, Location
     try:
         response = requests.get("https://ipinfo.io/json", timeout=5)
         data = response.json()
@@ -251,6 +251,15 @@ goto loop
         if os.path.exists(batch_path):
             os.remove(batch_path)
 
+def secret_packet_command():
+    print(Fore.YELLOW + "One more Packet! No More, No Less!")
+    confirm = input(Fore.YELLOW + "Are you sure you want to participate in one more packet? (Y/N): ").strip().lower()
+    if confirm == "Y":
+        for _ in range(22):
+            print(Fore.YELLOW + "One More Packet, One More Packet!")
+    else:
+        print(Fore.RED + "Well then fuck you too!")
+
 # ============ MAIN ===============
 
 if __name__ == "__main__":
@@ -262,12 +271,11 @@ if __name__ == "__main__":
 ░█▄▄█ ░█▄▄▄ ░█─░█ ░█▄▄▄█ ░█▄▄█ ░█▄▄█ ░█▄▄▄ ░█▄▄█ ░█──░█ 
 ============================================================
 """)
-  
+
     typing(Fore.YELLOW + "⚠️  You must agree to the terms of this tool. Using it without permission is illegal.", 0.02)
     agree = input(Fore.YELLOW + "Do you agree? (Y/N): ").strip().lower()
 
     if agree != "y":
-        # Gather scary info
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             s.connect(("8.8.8.8", 80))
@@ -292,15 +300,12 @@ if __name__ == "__main__":
         time.sleep(5)
         sys.exit(0)
 
-    # Remove old logs
     if os.path.exists(LOG_FILE):
         os.remove(LOG_FILE)
 
-    # Start safety reminder thread
     reminder_thread = threading.Thread(target=safety_reminder, daemon=True)
     reminder_thread.start()
 
-    # LANGUAGE
     lang = input(Fore.CYAN + "Select Language / Sélectionner la langue (EN/FR): ").strip().lower()
     if lang == "fr":
         print(Fore.YELLOW + "→ Bonjour! Bienvenue dans V2Packet.")
@@ -308,7 +313,6 @@ if __name__ == "__main__":
         lang = "en"
         print(Fore.YELLOW + "→ Hello! Welcome to V2Packet.")
 
-    # SOUND THEME
     print(Fore.CYAN + "Choose your sound style:")
     print("1. Normal beep")
     print("2. Laser beep")
@@ -328,12 +332,16 @@ if __name__ == "__main__":
         print("4. Noise Mode")
         print("5. View Logs")
         print("6. Show System Info")
-        print("7. DDOS (Fake)")
-        print("8. Exit\n")
+        print("7. DDOS")
+        print("8. Exit")
+        print("Type 'mustard' or '100' or 'packet' for secrets!")
 
-        choice = input(Fore.CYAN + "Enter choice (1-8): ").strip().lower()
+        choice = input(Fore.CYAN + "Enter choice: ").strip().lower()
 
-        # SECRET MUSTARD OPTION
+        if choice in ["100", "packet"]:
+            secret_packet_command()
+            continue
+
         if choice == "mustard":
             try:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -345,7 +353,6 @@ if __name__ == "__main__":
 
             if user_ip:
                 typing(Fore.RED + "Aww mustard! Come on man, now don’t put no mustard on that you need to put a little season on that thing! WHAT! Man come on get that pepper off there! Come on somebody come get this man! Come on now, come on get that pepper off there, that’s just too much doggone pepper. I dont wanna see this no more", 0.03)
-                # Send 69 packets with payload "mustord" to user IP
                 count = 69
                 payload = b"mustord"
                 protocol = "UDP"
@@ -372,7 +379,6 @@ if __name__ == "__main__":
             continue
 
         if choice == "7":
-            # fake ddos attack to user IP
             try:
                 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
                 s.connect(("8.8.8.8", 80))
@@ -444,7 +450,6 @@ if __name__ == "__main__":
         if choice == "3" or (protocol == "TCP" and choice in ["1", "2"]):
             flags = "R"
 
-        # Packet preview before sending
         packet_preview(protocol, targets, payload, ports, flags)
         if not safe_confirm("Send these packets?"):
             print(Fore.YELLOW + "Operation cancelled.\n")
