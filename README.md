@@ -26,6 +26,6 @@ pip install scapy colorama requests
 Prefarably best to run with 3.11
 
 ## Who currently owns this?
-thestrangerinblack on discord
-yousirareafish on discord
-barbusaheno on discord
+- thestrangerinblack on discord
+- yousirareafish on discord
+- barbusaheno on discord
