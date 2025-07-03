@@ -8,7 +8,6 @@ V2Packet is a Python-based packet crafting and sending tool designed for network
 - Multi-protocol support: ICMP, UDP, TCP  
 - Real-time logging of sent packets  
 - System info display (PC name, OS, Wi-Fi SSID, IP)  
-- Fun fake DDOS prank that opens multiple CMD windows cause why not.
 - Safety reminders and ethical usage warnings  
 - Supports English and French languages
 - Don't type mustard in Option menu.
